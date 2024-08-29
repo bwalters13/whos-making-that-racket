@@ -68,3 +68,15 @@ t-body {
     top: 20%;
     transform: translate(-50%, -50%);
 }
+
+.col2 .tooltiptext {
+    visibility: hidden;
+}
+
+.col2:hover .tooltiptext{
+    visibility: visible;
+}
+
+.show {
+    visibility: visible;
+}

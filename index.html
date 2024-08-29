@@ -50,11 +50,13 @@
                 <div class="col1" style="flex: 1 1 33%;">
                     <button style="width: 100%;">Name</button>
                 </div>
-                <div class="col2" style="flex: 1 1 33%;">
-                    <button style="width: 100%;">Country</button>
+                <div class="col2" style="flex: 1 1 33%; position: relative;">
+                    <span style="position: absolute; top: -4vh; background-color: whitesmoke;" id="country" class="tooltiptext">Yellow = Same Continent<br/>Green = Same Country</span>
+                    <button onclick="showCountryTT()" style="width: 100%;">Country</button>
                 </div>
-                <div class="col3" style="flex: 1 1 33%;">
-                    <button style="width: 100%;">Age</button>
+                <div class="col2" style="flex: 1 1 33%; position: relative;">
+                    <span style="position: absolute; top: -4vh; background-color: whitesmoke;" id="age" class="tooltiptext">Yellow = +/- 5 years<br/>Green = Correct Age</span>
+                    <button style="width: 100%;" onclick="showAgeTT()">Age</button>
                 </div>
             </div>
             <div id="guesses"></div>

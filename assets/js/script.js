@@ -107,3 +107,8 @@ function getAge(dob_str) {
 
     return Math.abs(age_dt.getUTCFullYear() - 1970);
 }
+
+function showCountryTT() {
+    console.log('hi');
+    document.getElementById('country').classList.toggle('show');
+}
