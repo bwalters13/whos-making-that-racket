@@ -78,5 +78,36 @@ t-body {
 }
 
 .show {
-    visibility: visible;
+    visibility: visible !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    #header {
+        width: 90% !important;
+        font-size: large !important;
+    }
+
+    button {
+        font-size: x-large;
+    }
+
+    label {
+        font-size: x-large;
+    }
+
+    input {
+        width: 50% !important;
+        height: 50% !important;
+    }
+
+    #guess-button {
+        width: 10% !important;
+    }
+
+    .navbar {
+        font-size: x-large;
+    }
+    audio {
+        width: 60%;
+    }
 }

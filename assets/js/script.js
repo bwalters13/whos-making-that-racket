@@ -112,3 +112,8 @@ function showCountryTT() {
     console.log('hi');
     document.getElementById('country').classList.toggle('show');
 }
+
+function showAgeTT() {
+    console.log('hi');
+    document.getElementById('age').classList.toggle('show');
+}
