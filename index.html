@@ -3,14 +3,62 @@
 <head>
     <title>Who's Making That Racket?</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="assets/js/script.js"></script>
+    <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <audio controls>
-        <source src="assets/audio/felix.mp3" type="audio/mpeg"></source>
-    </audio>
+<style>
+    #loading-container {
+        display: flex;
+        height: 100vh;
+    }
 
-    <input list="player-names" id="player-guess" name="player-guess">
-    <datalist id="player-names"></datalist>
+    #content-container {
+        display: none;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <h3 style="text-align: center;">
+            WHO'S MAKING THAT RACKET?
+        </h3>
+    </div>
+    <div id="loading-container">
+        Loading....
+    </div>
+    <div id="content-container">
+        <div id="winner" class="modal">
+            <h1>Correct!</h1>
+            <p id="num_guesses"></p>
+        </div>
+        <div id="input-container">
+            <audio controls style="margin: auto;">
+                <source src="assets/audio/rafa.mp3" type="audio/mpeg"></source>
+            </audio>
+
+            <label for="player-guess">
+                Guess a player!
+                <input list="player-names" id="player-guess" name="player-guess" placeholder="" value="" style="margin: auto;">
+                <button style="width: 5%; margin: auto;" onclick="handleGuess()">Guess</button>
+            </label>
+            <datalist id="player-names"></datalist>
+            
+        </div>
+
+        <div id="output-container">
+            <div id="header" class="table">
+                <div class="col1" style="flex: 1 1 33%;">
+                    <button style="width: 100%;">Name</button>
+                </div>
+                <div class="col2" style="flex: 1 1 33%;">
+                    <button style="width: 100%;">Country</button>
+                </div>
+                <div class="col3" style="flex: 1 1 33%;">
+                    <button style="width: 100%;">Age</button>
+                </div>
+            </div>
+            <div id="guesses"></div>
+        </div>
+    </div>
 </body>
 <h1>Hello!</h1>
