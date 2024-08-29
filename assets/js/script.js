@@ -30,7 +30,8 @@ let data;
 let allPlayers = [];
 getData().then((response) => {
     data = response;
-    let playerList = document.getElementById('player-names');
+    let playerList = document.getElementById('player-names').children[0];
+    console.log(playerList);
     data.forEach((player) => {
         const option = document.createElement('option');
         option.value = player.NAME_P;
